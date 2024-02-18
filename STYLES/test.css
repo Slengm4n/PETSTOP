@@ -1,0 +1,14 @@
+/*==========GOOGLE FONTS==========*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:ital,wght@0,100;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@300;400;500;600&family=Syne:wght@400;500;600&display=swap');
+
+
+/*==========HEADER & NAV==========*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+    z-index: fixed;
+}
