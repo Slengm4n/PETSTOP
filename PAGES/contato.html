@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;200;300;400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../STYLES/style.css">
+    <title>Contato</title>
+</head>
+<body class="body-contato">
+
+
+    
+    <nav class="header">
+        <label class="logo">UNIONTECH</label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../PAGES/aboutUs.html">Sobre nós</a></li>
+            <li><a href="../PAGES/singin.html">Entre em sua conta</a></li>
+        </ul>
+   </nav>
+
+    <div class="container-contato">
+        <form onsubmit="sendEmail(); reset(); return false;" class="form-contato">
+            <h3>CONTATO</h3>
+             <div class="inpu"></div>
+             <input type="text" id="name" placeholder="Nome" required>
+             <input type="email" id="email" placeholder="E-mail" required>
+             <input type="text" id="phone" placeholder="Telefone" required>
+             <textarea id="message" rows="4" placeholder="Como posso ajudar?"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <img src="./IMG/logo_uniontech.png" alt="Logo">
+                <p>Um passo além da tela.</p>
+            </div>
+    
+            <div class="footer-section contact">
+                <h2>Contato</h2>
+                <p>Email: unionstech777@gmail.com</p>
+                <p>Telefone: (11) 96209-9442</p>
+            </div>
+    
+            <div class="footer-section social">
+                <h2>Redes Sociais</h2>
+                <a href="https://www.instagram.com/_uniontech/" target="_blank">Instagram</a>
+                <a href="https://x.com/_uniontech?t=Ffu2jngTtzB3eOM3N0bQNg&s=09" target="_blank">Twitter</a>
+                <a href="https://www.tiktok.com/@_uniontech?_t=8hzteHpQSmr&_r=1" target="_blank">Instagram</a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2023 UNIONTECH. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    function sendEmail(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "unionstech777@gmail.com",
+        Password : "6A305D0969187C16487463D77C5006A15334",
+        To : 'unionstech777@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );    
+}
+</script>
+
+
+</body>
+</html>
