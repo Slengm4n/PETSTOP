@@ -173,18 +173,17 @@ case 'selecionar':
     echo "<center>Clientes caastrados na base de dados.<br></center>";
     echo "</div>";
     echo "<tr>";
-    echo "<th> Nome do cliente: </th>";
-    echo "<th> CPF do cliente: </th>";
-    echo "<th> Endereço do cliente: </th>";
-    echo "<th> CEP: </th>";
-    echo "<th> Número do cliente: </th>";
-    echo "<th> Email do cliente: </th>";
+    echo "<th> Nome do usuário: </th>";
+    echo "<th> E-mail: </th>";
+    echo "<th> Senha: </th>";
+    echo "<th> Nome completo: </th>";
+    echo "<th> Data de nascimento: </th>";
     echo "<th> Ação </th>";
     echo "</tr>";
     echo "</thead>";
     echo "<tbody>";
 
-    $sql = "SELECT * FROM tabela_users"; 
+    $sql = "SELECT * FROM table_user"; 
     $resultado = mysqli_query($conn, $sql) or die("Erro ao retornar dados");
 
     while ($registro = mysqli_fetch_array($resultado)) {
