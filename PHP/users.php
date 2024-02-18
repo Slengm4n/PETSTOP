@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="pt_br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf=-8">
     <meta charset ="utf-8" />
@@ -38,7 +38,7 @@ switch ($acao) {
         $phone = $_POST['phone'];
         $birthday = $_POST['birthday'];
         
-        $sql = "INSERT INTO tabela_users (username, email, password, fullname, phone, birthday)
+        $sql = "INSERT INTO table_user (username, email, password, fullname, phone, birthday)
          VALUES ('$username', '$email', '$password', '$fullname', '$phone', '$birthday')";
 
         if (!mysqli_query($conn, $sql)) {
@@ -54,7 +54,7 @@ switch ($acao) {
 		
 
 case 'deletar':
-    $sql = "DELETE FROM tabela_users WHERE user_id = '" . $id . "'";
+    $sql = "DELETE FROM table_user WHERE user_id = '" . $id . "'";
     
     if (!mysqli_query($conn, $sql)) {
         die('Error: ' . mysqli_error($conn));
@@ -72,7 +72,7 @@ case 'deletar':
 case 'montar':
 
     $id = $_GET ['id'];
-    $sql = 'SELECT * FROM tabela_users WHERE user_id =' . $id;
+    $sql = 'SELECT * FROM table_user WHERE user_id =' . $id;
     $resultado = mysqli_query($conn, $sql) or die('Erro ao retornar dados');
 
     echo "<div class='center-form'>";
@@ -144,7 +144,7 @@ echo "<form method='post' name='dados' action='users.php?acao=atualizar' onSubmi
         $birthday = $_POST['birthday'];
     
     
-        $sql = "UPDATE tabela_users SET username = ' ".$username . "', email = '".$email . "', password = '".$password . "', fullname = '".$fullname . "', phone = '" .$phone . "', birthday = '" .$birthday . "' WHERE user_id = '" .$codigo . "'"; 
+        $sql = "UPDATE table_users SET username = ' ".$username . "', email = '".$email . "', password = '".$password . "', fullname = '".$fullname . "', phone = '" .$phone . "', birthday = '" .$birthday . "' WHERE user_id = '" .$codigo . "'"; 
     
         if (!mysqli_query($conn, $sql)) {
             die('Erro no comando SQL UPDATE: ' . mysqli_error($conn));
